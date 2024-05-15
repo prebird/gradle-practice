@@ -2,6 +2,8 @@ package com.example.domain;
 
 import static org.assertj.core.api.Assertions.*;
 
+import com.example.domain.board.Board;
+import com.example.domain.board.BoardType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

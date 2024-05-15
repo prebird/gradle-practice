@@ -1,6 +1,6 @@
 package com.example.web.controller;
 
-import com.example.domain.BoardService;
+import com.example.domain.board.BoardService;
 import com.example.dto.CreateBoardRequest;
 import com.example.web.dto.CreatedId;
 import lombok.RequiredArgsConstructor;

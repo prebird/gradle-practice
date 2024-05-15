@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example.domain.board;
 
 public enum BoardType {
   GENERAL,  // 일반

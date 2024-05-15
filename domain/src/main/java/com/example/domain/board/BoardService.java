@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.example.domain.board;
 
 import com.example.dto.CreateBoardRequest;
 import lombok.RequiredArgsConstructor;
