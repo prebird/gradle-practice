@@ -13,6 +13,7 @@ class BoardTest {
     Board board = Board.builder()
         .title("테스트 제목")
         .content("테스트 내용")
+        .boardType(BoardType.GENERAL)
         .build();
     String updateTitle = "수정된 제목";
     // when
@@ -27,6 +28,7 @@ class BoardTest {
     Board board = Board.builder()
         .title("테스트 제목")
         .content("테스트 내용")
+        .boardType(BoardType.GENERAL)
         .build();
     String updateTitle = "11111111111";
     // when then
@@ -41,6 +43,7 @@ class BoardTest {
     Board board = Board.builder()
         .title("테스트 제목")
         .content("테스트 내용")
+        .boardType(BoardType.GENERAL)
         .build();
     String updateContent = "수정된 내용";
     // when

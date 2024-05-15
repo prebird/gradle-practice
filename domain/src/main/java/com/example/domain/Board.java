@@ -1,6 +1,8 @@
 package com.example.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -17,6 +19,8 @@ public class Board {
   private Long id;
   private String title;
   private String content;
+  @Enumerated(EnumType.STRING)
+  private BoardType boardType;
 
   public void changeTitle(String title) {
     if (title.length() > 10) {
