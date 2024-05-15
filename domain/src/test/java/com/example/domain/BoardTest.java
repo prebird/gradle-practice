@@ -15,10 +15,8 @@ class BoardTest {
         .content("테스트 내용")
         .build();
     String updateTitle = "수정된 제목";
-
     // when
     board.changeTitle(updateTitle);
-
     // then
     assertThat(board.getTitle()).isEqualTo(updateTitle);
   }
@@ -31,7 +29,6 @@ class BoardTest {
         .content("테스트 내용")
         .build();
     String updateTitle = "11111111111";
-
     // when then
     assertThatThrownBy(() -> {
       board.changeTitle(updateTitle);
@@ -46,10 +43,8 @@ class BoardTest {
         .content("테스트 내용")
         .build();
     String updateContent = "수정된 내용";
-
     // when
     board.changeContent(updateContent);
-
     // then
     assertThat(board.getContent()).isEqualTo(updateContent);
   }
