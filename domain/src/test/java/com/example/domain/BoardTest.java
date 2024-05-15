@@ -4,11 +4,16 @@ import static org.assertj.core.api.Assertions.*;
 
 import com.example.domain.board.Board;
 import com.example.domain.board.BoardType;
+import com.example.domain.member.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Board 테스트")
 class BoardTest {
+  public static final Member writer = Member.builder()
+      .name("작성자")
+      .build();
+
   @Test
   void 게시판_제목_변경에_성공합니다() {
     // given
@@ -16,6 +21,7 @@ class BoardTest {
         .title("테스트 제목")
         .content("테스트 내용")
         .boardType(BoardType.GENERAL)
+        .writer(writer)
         .build();
     String updateTitle = "수정된 제목";
     // when
@@ -31,6 +37,7 @@ class BoardTest {
         .title("테스트 제목")
         .content("테스트 내용")
         .boardType(BoardType.GENERAL)
+        .writer(writer)
         .build();
     String updateTitle = "11111111111";
     // when then
@@ -46,6 +53,7 @@ class BoardTest {
         .title("테스트 제목")
         .content("테스트 내용")
         .boardType(BoardType.GENERAL)
+        .writer(writer)
         .build();
     String updateContent = "수정된 내용";
     // when

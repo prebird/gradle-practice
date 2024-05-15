@@ -1,10 +1,13 @@
 package com.example.domain.board;
 
+import com.example.domain.member.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,6 +24,9 @@ public class Board {
   private String content;
   @Enumerated(EnumType.STRING)
   private BoardType boardType;
+  @ManyToOne
+  @JoinColumn(name = "writer_id")
+  private Member writer;
 
   public void changeTitle(String title) {
     if (title.length() > 10) {
