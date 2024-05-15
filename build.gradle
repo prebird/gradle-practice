@@ -31,8 +31,4 @@ subprojects {
 	test {
 		useJUnitPlatform()
 	}
-
-	jar {
-		enabled = false;
-	}
 }
