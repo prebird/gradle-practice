@@ -13,8 +13,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
-@NoArgsConstructor
+@Getter @NoArgsConstructor
 @AllArgsConstructor @Builder
 @Entity
 public class Board {
@@ -28,6 +27,10 @@ public class Board {
   @JoinColumn(name = "writer_id")
   private Member writer;
 
+  /**
+   * 게시글의 제목을 변경합니다.
+   * @param title
+   */
   public void changeTitle(String title) {
     if (title.length() > 10) {
       throw new IllegalArgumentException("제목은 10자를 초과할 수 없습니다.");
@@ -35,6 +38,10 @@ public class Board {
     this.title = title;
   }
 
+  /**
+   * 게시글의 내용을 변경합니다.
+   * @param content
+   */
   public void changeContent(String content) {
     this.content = content;
   }
